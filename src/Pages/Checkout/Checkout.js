@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router-dom';
 import { FaFilePdf } from "react-icons/fa";
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
@@ -26,7 +26,7 @@ const Checkout = () => {
                 <Pdf targetRef={ref} filename="code-example.pdf">
                             {({ toPdf }) => <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg' onClick={toPdf}>Download PDF</button>}
                 </Pdf>
-                <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg'>Checkout</button>
+                <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg'><Link className='text-slate-50' to='/singleCheckout'>Checkout</Link></button>
                 </div>
             </div>
 

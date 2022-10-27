@@ -5,6 +5,7 @@ import Course from "../../Pages/Course/Course";
 import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
 import SideBar from "../../Pages/SideBar/SideBar";
+import SingleCheckout from "../../Pages/SingleCheckOut/SingleCheckout";
 import Login from "../../shared/Login/Login/Login";
 import Register from "../../shared/Login/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoutes";
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
             {
                 path: '/faq',
                 element: <FAQ></FAQ>
+            },
+            {
+                path: '/singleCheckout',
+                element: <SingleCheckout></SingleCheckout>,
+                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses/${params.id}`)
             }
         ]
     }
