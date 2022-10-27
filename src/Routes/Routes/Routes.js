@@ -2,6 +2,7 @@ import AllCourses from "../../Pages/AllCourses/AllCourses";
 import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Course from "../../Pages/Course/Course";
+import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
 import SideBar from "../../Pages/SideBar/SideBar";
 import Login from "../../shared/Login/Login/Login";
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>,
-                loader: () => fetch('https://prussian-server.vercel.app/')
+                loader: () => fetch('https://prussian-server.vercel.app/blogs')
             },
             {
                 path: '/sidebar',
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/faq',
+                element: <FAQ></FAQ>
             }
         ]
     }

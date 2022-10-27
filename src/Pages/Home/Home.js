@@ -46,7 +46,7 @@ const Home = () => {
                     <h2 className='text-4xl text-semibold text-cyan-200'>Transform access to education</h2>
                 </div>
                 <div className='py-8 md:py-0 text-center'>
-                    <Link to='/register' className='text-semibold text-slate-50
+                    <Link to={'/login'} className='text-semibold text-slate-50
                      px-16 py-4 rounded bg-cyan-500 hover:bg-purple-500'>Enroll</Link>
                 </div>
             </div>
