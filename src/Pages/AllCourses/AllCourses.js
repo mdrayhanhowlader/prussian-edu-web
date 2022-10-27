@@ -7,8 +7,8 @@ const AllCourses = () => {
     const courses = useLoaderData([])
     return (
         <div>
-            <div className='grid grid-cols-5'>
-                <div className="left-side-bar">
+            <div className='grid md:grid-cols-5'>
+                <div className="left-side-bar w-5/5 mx-auto">
                     {
                         courses.map(course => <SideBar
                             key={course._id}
