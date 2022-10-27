@@ -19,12 +19,12 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5005/courses')
+                loader: () => fetch('https://prussian-server.vercel.app/courses')
             },
             {
                 path: '/courses',
                 element: <AllCourses></AllCourses>,
-                loader: () => fetch('http://localhost:5005/courses')
+                loader: () => fetch('https://prussian-server.vercel.app/courses')
             },
             {
                 path: '/course',
@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>,
-                loader: () => fetch('http://localhost:5005/blogs')
+                loader: () => fetch('https://prussian-server.vercel.app/')
             },
             {
                 path: '/sidebar',
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5005/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses${params.id}`)
             },
             {
                 path: '/register',

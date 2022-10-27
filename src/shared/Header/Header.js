@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 const Header = () => {
     const [open, setOpen] = useState(false)
     const {user, logOut} = useContext(AuthContext)
-    const {color, setColor} = useState("Dark")
+    const {color, setColor} = useState("Dark Mood")
 
     const handleLogOut = () => {
         logOut()
@@ -14,9 +14,7 @@ const Header = () => {
         .catch(error => console.error(error))
     }
 
-    const handleDark = () => {
-        setColor("Light")
-    }
+
 
     return (
         <div className='shadow-xl shadow-violet-200'>
@@ -38,8 +36,8 @@ const Header = () => {
                     <Link className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg' to="/statistics">FAQ</Link>
                     <Link className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg' to="/blog">Blog</Link>
 
-                    <Link onClick={handleDark} className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg' to="/blog">{color}</Link>
-
+                    <Link  className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg text-dark bg-black' to="/blog"></Link>
+                    <p className='bg-black'>{color}</p>
 
                     {
                         user?.uid ? 
