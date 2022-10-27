@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses${params.id}`)
+                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/register',

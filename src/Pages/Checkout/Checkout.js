@@ -21,11 +21,12 @@ const Checkout = () => {
                 <p><small>${course.price}.00</small></p>
                 <p>Rating: {course.rating.number}</p>
                 <p>Level: {course.rating.Level}</p>
-                <div>
+                <div className='flex justify-between'>
 
                 <Pdf targetRef={ref} filename="code-example.pdf">
-                            {({ toPdf }) => <button onClick={toPdf}>Download PDF</button>}
+                            {({ toPdf }) => <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg' onClick={toPdf}>Download PDF</button>}
                 </Pdf>
+                <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg'>Checkout</button>
                 </div>
             </div>
 
