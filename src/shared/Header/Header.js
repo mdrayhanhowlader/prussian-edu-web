@@ -36,9 +36,6 @@ const Header = () => {
                     <Link className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg' to="/statistics">FAQ</Link>
                     <Link className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg' to="/blog">Blog</Link>
 
-                    <Link  className='block md:inline md:mr-6 pl-2 text-white bg-violet-400 hover:bg-red-400 md:hover:bg-inherit md:bg-inherit md:text-black py-2 md:py-0 mb-2 md:mb-0 hover:text-violet-500 font-medium text-lg text-dark bg-black' to="/blog"></Link>
-                    <p className='bg-black'>{color}</p>
-
                     {
                         user?.uid ? 
                         <>
