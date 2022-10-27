@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useLoaderData, Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 import Pdf from "react-to-pdf";
+import { toast } from 'react-toastify';
 
 
 const ref = React.createRef();
@@ -12,7 +12,7 @@ const Checkout = () => {
     console.log(course)
 
     const handleCheckOut = () => {
-        return toast.success("Purchase has done", {autoClose: 500})
+       return toast.success("Purchase has done", {autoClose: 500})
     }
 
     return (
@@ -32,7 +32,7 @@ const Checkout = () => {
                 <Pdf targetRef={ref} filename="code-example.pdf">
                             {({ toPdf }) => <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg' onClick={toPdf}>Download PDF</button>}
                 </Pdf>
-                <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg'><Link onClick={handleCheckOut} className='text-slate-50'>Checkout</Link></button>
+                <button className='mt-6 px-8 py-4 bg-red-600 text-slate-50 font-semibold rounded-lg'><Link to='/' onClick={handleCheckOut} className='text-slate-50'>Checkout</Link></button>
                 </div>
             </div>
 
