@@ -2,13 +2,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const SingleCheckout = () => {
-    const course = useLoaderData([])
-    const {title, price} = course
+    const course = useLoaderData()
+    console.log(course.title)
     return (
-        <div>
-            <h4>{title}</h4>
-            <h1>{price}</h1>
-            <button to='/'>Buy Now</button>
+        <div className='w-2/5 mx-auto bg-slate-200 p-6 mt-24'>
+            <h5 className=''>{course.title}</h5>
         </div>
     );
 };
