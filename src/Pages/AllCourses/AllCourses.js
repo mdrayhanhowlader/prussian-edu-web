@@ -18,7 +18,7 @@ const AllCourses = () => {
                 </div>
                 <div className="all-course col-span-4">
                     <h2 className='py-8 text-violet-800 text-center text-5xl font-semibold'>Explore Your Course</h2>
-                    <div className='md:grid md:grid-cols-3'>
+                    <div className='mb-4 md:grid md:grid-cols-3 md:gap-4'>
                         {
                             courses.map(course => <Course
                                 key={course._id}
