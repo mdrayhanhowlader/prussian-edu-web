@@ -10,7 +10,7 @@ const AllCourses = () => {
       <div>
         <main>
           <section>
-            <div class="bg-gray-100 sm:grid grid-cols-5 grid-rows-2 px-4 py-6 min-h-full lg:min-h-screen space-y-6 sm:space-y-0 sm:gap-4">
+            <div class="bg-gray-100 sm:grid grid-cols-5 grid-rows-2 px-4 py-12 min-h-full lg:min-h-screen space-y-6 sm:space-y-0 sm:gap-4">
               <div class="col-span-4  rounded-md flex items-center">
                 <div className="md:grid md:grid-cols-3 md:gap-4">
                   {courses.map((course) => (

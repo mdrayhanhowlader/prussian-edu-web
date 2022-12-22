@@ -14,55 +14,61 @@ const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../layout/Main");
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        children: [
-            {
-                path: '/',
-                element: <Home></Home>,
-                loader: () => fetch('https://prussian-server.vercel.app/courses')
-            },
-            {
-                path: '/courses',
-                element: <AllCourses></AllCourses>,
-                loader: () => fetch('https://prussian-server.vercel.app/courses')
-            },
-            {
-                path: '/course',
-                element: <Course></Course>
-            },
-            {
-                path: '/blog',
-                element: <Blog></Blog>,
-                loader: () => fetch('https://prussian-server.vercel.app/blogs')
-            },
-            {
-                path: '/sidebar',
-                element: <SideBar></SideBar>
-            },
-            {
-                path: '/checkout/:id',
-                element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses/${params.id}`)
-            },
-            {
-                path: '/register',
-                element: <Register></Register>
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/faq',
-                element: <FAQ></FAQ>
-            },
-            {
-                path: '/singleCheckout',
-                element: <SingleCheckout></SingleCheckout>,
-                loader: ({params}) => fetch(`https://prussian-server.vercel.app/courses/${params.id}`)
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("https://prussian-server.vercel.app/courses"),
+      },
+      {
+        path: "/courses",
+        element: <AllCourses></AllCourses>,
+        loader: () => fetch("https://prussian-server.vercel.app/courses"),
+      },
+      {
+        path: "/course",
+        element: <Course></Course>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+        loader: () => fetch("https://prussian-server.vercel.app/blogs"),
+      },
+      {
+        path: "/sidebar",
+        element: <SideBar></SideBar>,
+      },
+      {
+        path: "/checkout/:id",
+        element: (
+          <PrivateRoute>
+            <Checkout></Checkout>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://prussian-server.vercel.app/courses/${params.id}`),
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
+      },
+      {
+        path: "/singlecheckout/:id",
+        element: <SingleCheckout></SingleCheckout>,
+        loader: ({ params }) =>
+          fetch(`https://prussian-server.vercel.app/courses/${params.id}`),
+      },
+    ],
+  },
+]);
